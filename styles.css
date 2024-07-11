@@ -1,0 +1,135 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+nav{
+    height:65px;
+    display:flex;
+    align-items:center;
+    background-color:black;
+    color:white;
+    text-decoration:none;
+    font-size:27px;
+    
+}
+nav li{
+    list-style-type:none; /*to remove the dot that appears before text*/
+    margin-left:10px;
+}
+body{
+    background-color:#DAD7CD;
+    font-family:sans-serif !important;
+}
+.game-container{
+    display:flex;
+    justify-content:center !important;
+    margin-top:60px;
+    
+}
+.boxes{
+    /*make a grid of the game box*/
+    font-family:"Rubik";
+    display:grid;
+    grid-template-rows:repeat(3,10vw);
+    grid-template-columns:repeat(3,10vw);/*vw- viewport width-> which means 10% of the complete screen width irrespective of the screen size which helps in the making website and text responsive*/
+}
+.box{
+    border:1px solid black;
+    font-size:8vw;
+    text-align:center;
+}
+.box:hover{
+    background-color:rgb(240, 232, 222);
+    cursor:pointer;
+}
+.game-info{
+    margin-left:80px;
+    
+}
+.game-info h1{
+    color:#1A5319;
+    font-size:2.8vw;
+}
+.reset-btn{
+    padding:10px 30px;
+    font-size:1.25rem;
+    font-family:sans-serif;
+    border:2px solid black;
+    border-radius:1rem;
+   margin-top:40px;
+   cursor:pointer;
+   position:relative;
+    left:260px;
+    background-color:#987D9A;
+}
+.reset-btn:hover{
+    transform:scale(1.03);
+}
+.bt-0{
+    border-top:0;
+}
+.bb-0{
+    border-bottom:0;
+}
+.bl-0{
+    border-left:0;
+}
+.br-0{
+    border-right:0;
+}
+.image img{
+    width:0px;
+    transition:width 1s ease-in-out;
+    position:relative;
+    left:200px;
+    top:40px;
+}
+.text{
+    color:#0C1844;
+    font-size:2.5vw;
+    position:relative;
+   left:240px;
+   margin-top:40px !important;
+   font-family:"Lora";
+   font-weight:bold;
+}
+/*to make the website responsive*/
+@media screen and (max-width: 900px) {
+    /* Adjust styles for smaller screens */
+    .game-container {
+      flex-direction: column; /* Stack elements vertically */
+      flex-wrap:wrap;
+      align-items:center;
+    }
+  
+    .boxes {
+      /* Maintain aspect ratio for boxes */
+      width: min(90vw, 300px); /* Adjust minimum width based on preference */
+      height: min(90vw, 300px); /* Adjust minimum height based on preference */
+    }
+  
+    .game-info {
+      margin: 30px auto; /* Center game info horizontally */
+    }
+  
+    .reset-btn {
+        margin-top:40px !important;
+      left: auto; /* Remove left positioning */
+      margin: 0 auto; /* Center reset button horizontally */
+    }
+    .game-info h1{
+        font-size:1.5rem;
+    }
+    .text{
+        font-size:22px;
+    }
+    .boxes{
+        grid-template-rows:repeat(3,15vw);
+        grid-template-columns:repeat(3,15vw);
+    }
+    .box{
+        display:flex;
+        justify-content:center;
+        text-align:center !important;
+    }
+}
