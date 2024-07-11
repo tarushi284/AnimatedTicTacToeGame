@@ -5,7 +5,8 @@ let won=new Audio("gameover.mp3");
 let lost= new Audio("over.mp3");
 let click= new Audio("click.mp3");
 let music= new Audio("music.mp3");
-
+music.volume=0.5;
+click.volume=0.9;
 //initialising the turn variable with 'X'
 let turn="X";
 
