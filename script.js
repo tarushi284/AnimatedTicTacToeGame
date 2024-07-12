@@ -30,7 +30,7 @@ const checkWin=()=>{
         {
             music.pause();
             isgameover=true;
-            document.querySelector(".text").innerText=boxes[e[0]].innerText+" won";
+            document.querySelector(".text").innerText=boxes[e[0]].innerText+" Won!";
             won.play();
             document.querySelector(".image").getElementsByTagName("img")[0].style.width="200px";
         }
